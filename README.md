@@ -53,6 +53,7 @@ https://github.com/user-attachments/assets/7205aa1e-7706-45f7-bd82-ec35102aa07a
 - Sobald du fertig bist, wähle unten `TileMap`, wähle ein Tile aus, dass du willst und du kannst nun das Level malen
 
 # Links zu kostenlosen Resourcen
+Am Besten für Pixel-Art Hintergründe und Assets: https://rottingpixels.itch.io/ 
 Fantastisch für Hintergründe und Assets: https://kenney.nl <br>
 Hat zudem auch Spieler- und Gegner-Sprites: https://opengameart.org
 >[!IMPORTANT]
