@@ -1,0 +1,11 @@
+make camera follow player -> simply make the camera a child of the player
+tileset -> 
+  tilemap layer node erstellen
+  Größe der Tiles auf 21 Ändern (im Tile set das Teil vom Tile Map Layer ist under überall sonst)
+  Die richtigen Tiles in Tileset auswählen
+  Mit der Tile Map ein Level malen
+  Physik: TileMapLayer>TileMap>Physics Layers, dann in Tileset>paint>Physics Layer
+
+different animation states -> file sprite: animated_sprite.flip_h = false
+play animation: animated_sprite.play("animation_name")
+background other textures -> should also be draw via a tile map with a different layer
