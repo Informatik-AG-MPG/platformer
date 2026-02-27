@@ -4,6 +4,9 @@ Das Ziel ist es, dass ihr euren eigenen Platformer (à la Mario Bros.) erstellt.
 # Hinweis
 Grundlegend ist diese letzte Sektion nach dem fantastischen "Godot Beginner Tutorial" vom dänischen YouTube Kanal "Brackeys" aufgebaut. Solange Englisch kein Problem ist, würde ich dieses Video sehr empfehlen: https://www.youtube.com/watch?v=LOhfqjmasi0
 
+# Vorschau:
+[![Preview](res/preview.png)](res/preview.mp4)
+
 # Aufgabenschritte
 1. Spieler-Controller (gemeinsam) (26.02)
 2. einfache Umgebung (gemeinsam) (05.03)
@@ -20,7 +23,7 @@ Grundlegend ist diese letzte Sektion nach dem fantastischen "Godot Beginner Tuto
 ### Animated-Sprite
 - Füge dieser eine Animated-Sprite-2D-Node
 - unter dem Punkt `Sprite-Frames` erstelle einen Neuen (Pfeil nach unten)
-- Drücke darauf; ein Animations-Fenster sollte sich öffnen
+- Drücke auf diesen `Sprite-Frames`; ein Animations-Fenster sollte sich öffnen
 -  Wähle den Knopf mit dem Raster und fügt Sprites von einem heruntergeladenen (oder selbst gemachten) Sprite-Sheet hinzu (siehe [Quellen](#quellen) für Links)
 >[!WARNING]
 > Falls es sich um Pixel Art handelt, gehe unter `Project>Project Settings>General>Rendering>Textures>Default Texture Filter` und stellt ihn auf `Nearest`.
@@ -36,8 +39,18 @@ Grundlegend ist diese letzte Sektion nach dem fantastischen "Godot Beginner Tuto
 - Wähle den Kasten `Vorlage` oder `Template` aus. (Was das macht klären wir später)
 - Passt nun die Geschwindigkeits und Sprung Variablen an, so wie es euch gefällt
 - Erstellt zudem eine eigene Inputmap. Siehe [hier](https://github.com/Informatik-AG-MPG/script?tab=readme-ov-file#inputmap-erstellen) für eine Wiederholung.
+### Die Camera dem Spieler folgen lassen
+- Dazu muss die `Camera` einfach `Child-Node` der `Spieler-Szene` sein.
 ## 2. Umgebung erstellen (mit Tilesets)
-Das kommt in der nächsten Stunde (oder falls ihr wollt hier: https://youtu.be/LOhfqjmasi0?t=1017)
+- Füge eine Node vom Typ `TileMapLayer` hinzu
+- Erstelle ein neues TileSet (wie bei den [Sprite Frames](#animated-sprite))
+- Passe die Größe deines TileSets falls nötig an, indem du auf `TileSet` im Inspektor drückst.
+- Füge unter TileSet im aufpoppended Menü (unten) deine TileMap hinzu (per Drag and drop)
+- Es wird gefragt, ob du automatisch Tiles im Atlas erstellen willst: Drücke "ja"
+- Passe `Seperation` und `Margins`, sowie falls nötig `Texture Region` an
+- Füge im Inspektor unter `TileSet` nun ein `PhysicsLayer hinzu` (sodass der Spieler nicht durch den Boden fällt)
+- Zurück im unteren Bildschirm, kannst du nun den `Paint` Tab wählen und das neue `Physics Layer` auswählen und die Objekte mit denen kollidiert werden soll anmalen.
+- Sobald du fertig bist, wähle unten `TileMap`, wähle ein Tile aus, dass du willst und du kannst nun das Level malen
 
 # Links zu kostenlosen Resourcen
 Fantastisch für Hintergründe und Assets: https://kenney.nl <br>
@@ -47,6 +60,14 @@ Hat zudem auch Spieler- und Gegner-Sprites: https://opengameart.org
 > Recherchiert bei allem Anderen, bevor ihr es veröffentlicht.
 
 # Quellen
+Von hier, stammen entweder die Sprites für das Spiel oder nützliches Wissen.
+Vielen Dank an diejenigen die diese fantastischen Resourcen kostenlos und teils ohne Notwendigkeit eine Nennung bereitstellen.
+## Sprites
+https://rottingpixels.itch.io/nature-platformer-tileset <br>
 https://opengameart.org/content/classic-hero-and-baddies-pack <br>
-https://kenney.nl/assets/platformer-art-pixel-redux <br>
-https://www.youtube.com/watch?v=LOhfqjmasi0
+https://kenney.nl/assets/platformer-art-pixel-redux
+## Wissen
+[How to make a Video Game - Godot Beginner Tutorial - Brackeys](https://www.youtube.com/watch?v=LOhfqjmasi0) <br>
+[Die Godot Docs](https://docs.godotengine.org/en/stable/) <br>
+[r/godot](https://www.reddit.com/r/godot) <br>
+[stackoverflow](https://stackoverflow.com/questions/61108940/how-to-make-camera-follow-player-in-godot)
