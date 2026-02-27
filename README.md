@@ -5,7 +5,7 @@ Das Ziel ist es, dass ihr euren eigenen Platformer (à la Mario Bros.) erstellt.
 Grundlegend ist diese letzte Sektion nach dem fantastischen "Godot Beginner Tutorial" vom dänischen YouTube Kanal "Brackeys" aufgebaut. Solange Englisch kein Problem ist, würde ich dieses Video sehr empfehlen: https://www.youtube.com/watch?v=LOhfqjmasi0
 
 # Vorschau:
-[![Preview](res/preview.png)](res/preview.mp4)
+https://github.com/user-attachments/assets/8f948a04-104e-4e93-8e71-4e904cc24224
 
 # Aufgabenschritte
 1. Spieler-Controller (gemeinsam) (26.02)
