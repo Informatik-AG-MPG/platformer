@@ -8,9 +8,9 @@ Grundlegend ist diese letzte Sektion nach dem fantastischen "Godot Beginner Tuto
 https://github.com/user-attachments/assets/7205aa1e-7706-45f7-bd82-ec35102aa07a
 
 # Aufgabenplan
-1. Spieler-Controller (gemeinsam) (26.02.)
-2. einfache Umgebung (gemeinsam) (05.03.)
-3. Hintergrund, hochladen auf GitHub (gemeinsam) (12.03.)
+1. [Spieler-Controller](#1-spieler-controller) (gemeinsam) (26.02.)
+2. [einfache Umgebung](#2-umgebung-erstellen-mit-tilesets) (gemeinsam) (05.03.)
+3. [Hintergrund, hochladen auf GitHub](#3-hintergrund-hochladen-auf-github) (gemeinsam) (12.03.)
 4. Eigene Sprites *Spieler und Umgebung* (gemeinsam) (12.03., 19.03.)
 5. Gegner, Game Over (gemeinsam)
 6. Weitere Gegner, eigener Game Over Bildschrim
@@ -54,7 +54,21 @@ https://github.com/user-attachments/assets/7205aa1e-7706-45f7-bd82-ec35102aa07a
 - Füge im Inspektor unter `TileSet` nun ein `PhysicsLayer hinzu` (sodass der Spieler nicht durch den Boden fällt)
 - Zurück im unteren Bildschirm, kannst du nun den `Paint` Tab wählen und das neue `Physics Layer` auswählen und die Objekte mit denen kollidiert werden soll anmalen.
 - Sobald du fertig bist, wähle unten `TileMap`, wähle ein Tile aus, dass du willst und du kannst nun das Level malen
-
+## 3. Hintergrund, hochladen auf GitHub
+### Hintergrund
+Um einen Hintergrund hinzuzufügen: 
+- erstellt eine neue `TileMapLayer`-Node und nennt sie so etwas wie `Hintergrund`
+- Im Inspektor unter `Ordering` setzt den Z-Index auf -1.
+- Macht die neue `TileMapLayer`-Node eine `Child-Node` des Hauptlayers (drag and drop)
+- Geht auf das Hauptlayer und unter `Tileset` klickt auf den Pfeil nach unten und wählt `speichern unter`
+- Speichert die Datei am besten neben eurem TileSet-Bild
+- In dem Hintergrund-Layer könnt ihr nun unter `Tileset` auf den Pfeil nach unten drücken und `Laden` auswählen
+- Wählt hier nun das eben gespeicherte Tileset
+- Nun könnt ihr wie zuvor malen, der Hintergrund erscheint nun aber hinter den Platformer und nicht auf der selben Ebene.
+### GitHub
+- [Einrichten von Access-Tokens](https://github.com/Informatik-AG-MPG/script?tab=readme-ov-file#access-tokens-f%C3%BCr-github-einrichten)
+- [Hochladen auf GitHub](https://github.com/Informatik-AG-MPG/script?tab=readme-ov-file#typisches-arbeiten-mit-git)
+- [Mögliche Probleme](https://github.com/Informatik-AG-MPG/script?tab=readme-ov-file#typisches-arbeiten-mit-git)
 # Links zu kostenlosen Resourcen
 Am Besten für Pixel-Art Hintergründe und Assets: https://rottingpixels.itch.io/ <br>
 Fantastisch für Hintergründe und Assets: https://kenney.nl <br>
