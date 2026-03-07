@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://c7x7w2t4htahe"]
 
-[ext_resource type="Texture2D" uid="uid://dvyp5nj4uisp6" path="res://assets/World/RotingPixels/nature-paltformer-tileset-16x16.png" id="1_olryx"]
+[ext_resource type="Texture2D" uid="uid://dvyp5nj4uisp6" path="res://assets/World/nature-paltformer-tileset-16x16.png" id="1_olryx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
 texture = ExtResource("1_olryx")

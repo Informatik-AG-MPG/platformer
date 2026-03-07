@@ -2,7 +2,9 @@
 Das Ziel ist es, dass ihr euren eigenen Platformer (à la Mario Bros.) erstellt. Das wirkt zunächst, wie eine gigantische Aufgabe, aber mit dem was ihr bereits wisst und indem wir einige Schritte gemeinsam besprechen, wird das gar nicht so schwer.
 
 # Hinweis
-Grundlegend ist diese letzte Sektion nach dem fantastischen "Godot Beginner Tutorial" vom dänischen YouTube Kanal "Brackeys" aufgebaut. Solange Englisch kein Problem ist, würde ich dieses Video sehr empfehlen: https://www.youtube.com/watch?v=LOhfqjmasi0
+Grundlegend ist diese letzte Sektion nach dem fantastischen "Godot Beginner Tutorial" vom dänischen YouTube Kanal "Brackeys" aufgebaut. Solange Englisch kein Problem ist, würde ich dieses Video sehr empfehlen:
+[![How to make a Video Game - Godot Beginner Tutorial](https://img.youtube.com/vi/LOhfqjmasi0/0.jpg)](https://www.youtube.com/watch?v=LOhfqjmasi0)
+
 
 # Vorschau:
 https://github.com/user-attachments/assets/7205aa1e-7706-45f7-bd82-ec35102aa07a

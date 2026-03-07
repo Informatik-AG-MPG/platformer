@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dve8hfghfvdfr" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://q646ipq51kns" path="res://scripts/player.gd" id="2_0wfyh"]
-[ext_resource type="TileSet" uid="uid://c7x7w2t4htahe" path="res://assets/World/RotingPixels/tileset.tres" id="3_sugp2"]
+[ext_resource type="TileSet" uid="uid://c7x7w2t4htahe" path="res://assets/World/tileset.tres" id="3_sugp2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0wfyh"]
 

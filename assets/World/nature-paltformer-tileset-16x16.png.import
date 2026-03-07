@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvyp5nj4uisp6"
-path="res://.godot/imported/nature-paltformer-tileset-16x16.png-ab44fe25fd94688b781a112ac86d7661.ctex"
+path="res://.godot/imported/nature-paltformer-tileset-16x16.png-e26d2b1df457cd622af0d05ea861de95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/World/RotingPixels/nature-paltformer-tileset-16x16.png"
-dest_files=["res://.godot/imported/nature-paltformer-tileset-16x16.png-ab44fe25fd94688b781a112ac86d7661.ctex"]
+source_file="res://assets/World/nature-paltformer-tileset-16x16.png"
+dest_files=["res://.godot/imported/nature-paltformer-tileset-16x16.png-e26d2b1df457cd622af0d05ea861de95.ctex"]
 
 [params]
 
