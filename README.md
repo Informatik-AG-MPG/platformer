@@ -7,12 +7,13 @@ Grundlegend ist diese letzte Sektion nach dem fantastischen "Godot Beginner Tuto
 # Vorschau:
 https://github.com/user-attachments/assets/7205aa1e-7706-45f7-bd82-ec35102aa07a
 
-# Aufgabenschritte
-1. Spieler-Controller (gemeinsam) (26.02)
-2. einfache Umgebung (gemeinsam) (05.03)
-3. Eigene Sprites *Spieler und Umgebung* (gemeinsam) (12.03, 19.03)
-4. Gegner, Game Over (gemeinsam)
-5. Weitere Gegner, eigener Game Over Bildschrim
+# Aufgabenplan
+1. Spieler-Controller (gemeinsam) (26.02.)
+2. einfache Umgebung (gemeinsam) (05.03.)
+3. Hintergrund, hochladen auf GitHub (gemeinsam) (12.03.)
+4. Eigene Sprites *Spieler und Umgebung* (gemeinsam) (12.03., 19.03.)
+5. Gegner, Game Over (gemeinsam)
+6. Weitere Gegner, eigener Game Over Bildschrim
 
 # Erklärung
 ## 0. Grundlegendes
