@@ -42,6 +42,8 @@ https://github.com/user-attachments/assets/7205aa1e-7706-45f7-bd82-ec35102aa07a
 - Erstellt zudem eine eigene Inputmap. Siehe [hier](https://github.com/Informatik-AG-MPG/script?tab=readme-ov-file#inputmap-erstellen) für eine Wiederholung.
 ### Die Camera dem Spieler folgen lassen
 - Dazu muss die `Camera` einfach `Child-Node` der `Spieler-Szene` sein.
+>[!Tip]
+> Falls du das ganze etwas lebendiger haben willst, kannst du auf die Camera-Node klicken (links) und im Inspektor (rechts) `Position Smoothing` einschalten.
 ## 2. Umgebung erstellen (mit Tilesets)
 - Füge eine Node vom Typ `TileMapLayer` hinzu
 - Erstelle ein neues TileSet (wie bei den [Sprite Frames](#animated-sprite))

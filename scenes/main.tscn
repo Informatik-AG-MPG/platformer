@@ -13,6 +13,7 @@ script = ExtResource("2_0wfyh")
 
 [node name="camera" type="Camera2D" parent="player" unique_id=323026015]
 zoom = Vector2(4, 4)
+position_smoothing_enabled = true
 
 [node name="world boundary" type="StaticBody2D" parent="." unique_id=1943251096]
 
