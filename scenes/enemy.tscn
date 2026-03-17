@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://ddunuysbyun8j"]
+
+[ext_resource type="Script" uid="uid://couxpxv7vew1y" path="res://scripts/enemy.gd" id="1_7p1mj"]
+[ext_resource type="Texture2D" uid="uid://ch1go5u72n0lp" path="res://assets/enemy_graphic.png" id="2_md0e3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
+size = Vector2(16, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ra3w"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1743896824]
+top_level = true
+script = ExtResource("1_7p1mj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2032780394]
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_md0e3")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=52012528]
+position = Vector2(2, -10)
+rect = Rect2(-10, -5, 16, 15)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1590470665]
+position = Vector2(-0.037500143, -7.4700003)
+scale = Vector2(0.039888337, 0.037369728)
+texture = ExtResource("2_md0e3")
+
+[node name="RayCast2D_left" type="RayCast2D" parent="." unique_id=439670862]
+position = Vector2(0, -3)
+rotation = 1.5707964
+target_position = Vector2(4.7683716e-07, 10)
+
+[node name="RayCast2D_right" type="RayCast2D" parent="." unique_id=1589046885]
+position = Vector2(0, -3)
+rotation = -1.5707964
+target_position = Vector2(0, 10)
+
+[node name="RayCast2D_down_left" type="RayCast2D" parent="." unique_id=971301888]
+position = Vector2(-8, -8)
+target_position = Vector2(0, 10)
+
+[node name="RayCast2D_down_right" type="RayCast2D" parent="." unique_id=2075557229]
+position = Vector2(8, -8)
+target_position = Vector2(0, 10)
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=82849428]
+position = Vector2(0, -13)
+scale = Vector2(0.8, 0.1)
+shape = SubResource("RectangleShape2D_4ra3w")
+target_position = Vector2(0, -40)
