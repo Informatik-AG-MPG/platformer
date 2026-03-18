@@ -28,12 +28,12 @@ texture = ExtResource("2_md0e3")
 [node name="RayCast2D_left" type="RayCast2D" parent="." unique_id=439670862]
 position = Vector2(0, -3)
 rotation = 1.5707964
-target_position = Vector2(4.7683716e-07, 10)
+target_position = Vector2(4.7683716e-07, 9)
 
 [node name="RayCast2D_right" type="RayCast2D" parent="." unique_id=1589046885]
 position = Vector2(0, -3)
 rotation = -1.5707964
-target_position = Vector2(0, 10)
+target_position = Vector2(-4.7683716e-07, 9)
 
 [node name="RayCast2D_down_left" type="RayCast2D" parent="." unique_id=971301888]
 position = Vector2(-8, -8)

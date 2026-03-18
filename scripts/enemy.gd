@@ -7,7 +7,7 @@ var down_left
 var down_right
 var top_hurtbox
 
-const SPEED = 50.0
+const SPEED = 20.0
 var dir
 var random = RandomNumberGenerator.new()
 
