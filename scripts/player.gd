@@ -1,8 +1,13 @@
 extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var hurtbox = $ShapeCast2D
+
+signal you_died
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -300
+func _ready() -> void:
+	you_died.connect(_on_you_died)
 
 func _physics_process(delta: float) -> void:
 	# Gravitation
@@ -33,4 +38,17 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	
+	if hurtbox.is_colliding():
+		print("coll")
+		for i in range(hurtbox.get_collision_count()):
+			print(hurtbox.get_collider(i))
+			if "Enemy" in hurtbox.get_collider(i).get_name():
+				print("see enemy")
+				emit_signal("you_died")
 	move_and_slide()
+
+func _on_you_died():
+	print("got here")
+	get_tree().reload_current_scene()
+	pass

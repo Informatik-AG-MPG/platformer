@@ -7,8 +7,6 @@ var down_left
 var down_right
 var top_hurtbox
 
-var collider_velocity_y
-
 const SPEED = 50.0
 var dir
 var random = RandomNumberGenerator.new()
@@ -48,7 +46,7 @@ func _physics_process(_delta: float) -> void:
 	if top_hurtbox.is_colliding():
 		for i in range(top_hurtbox.get_collision_count()):
 			if top_hurtbox.get_collider(i).get_name() == "player":
-				collider_velocity_y = top_hurtbox.get_collider(i).velocity.y
+				var collider_velocity_y = top_hurtbox.get_collider(i).velocity.y
 				if collider_velocity_y  >= 0:
 					emit_signal("enemy_died")
 
