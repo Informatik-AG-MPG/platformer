@@ -9,8 +9,9 @@ var top_hurtbox
 
 var collider_velocity_y
 
-const SPEED = 75.0
+const SPEED = 50.0
 var dir
+var random = RandomNumberGenerator.new()
 
 signal enemy_died
 
@@ -27,7 +28,10 @@ func _ready() -> void:
 	down_right = get_node("RayCast2D_down_right")
 	top_hurtbox = get_node("ShapeCast2D")
 
-	dir = 1
+	random.randomize()
+	dir = randi_range(-1, 0)
+	if dir == 0:
+		dir = 1
 
 	pass # Replace with function body.
 
@@ -42,12 +46,15 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 	if top_hurtbox.is_colliding():
-		collider_velocity_y = top_hurtbox.get_collider(0).velocity.y
-		if collider_velocity_y  >= 0:
-			emit_signal("enemy_died")
+		for i in range(top_hurtbox.get_collision_count()):
+			if top_hurtbox.get_collider(i).get_name() == "player":
+				collider_velocity_y = top_hurtbox.get_collider(i).velocity.y
+				if collider_velocity_y  >= 0:
+					emit_signal("enemy_died")
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
-	queue_free()
+	pass
+	#queue_free()
 
 func _on_enemy_died():
 	queue_free()

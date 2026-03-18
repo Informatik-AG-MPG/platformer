@@ -38,4 +38,10 @@ tile_map_data = PackedByteArray("AAD+//j/AAACAAcAAAABAPj/AAAEAAgAAAACAPj/AAAEAAg
 tile_set = ExtResource("3_sugp2")
 
 [node name="Enemy" parent="." unique_id=1768489995 instance=ExtResource("4_jyhfs")]
-position = Vector2(-15, 16)
+position = Vector2(112, -16)
+
+[node name="Enemy2" parent="." unique_id=1743896824 instance=ExtResource("4_jyhfs")]
+position = Vector2(242, 48)
+
+[node name="Enemy3" parent="." unique_id=1014564922 instance=ExtResource("4_jyhfs")]
+position = Vector2(267, 0)
