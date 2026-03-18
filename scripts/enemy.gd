@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var visible_on_screen_notifier
+#var visible_on_screen_notifier
 var left
 var right
 var down_left
@@ -15,8 +15,8 @@ signal enemy_died
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	visible_on_screen_notifier = get_node("VisibleOnScreenNotifier2D")
-	visible_on_screen_notifier.screen_exited.connect(_on_visible_on_screen_notifier_2d_screen_exited)
+	#visible_on_screen_notifier = get_node("VisibleOnScreenNotifier2D")
+	#visible_on_screen_notifier.screen_exited.connect(_on_visible_on_screen_notifier_2d_screen_exited)
 
 	enemy_died.connect(_on_enemy_died)
 
@@ -50,8 +50,8 @@ func _physics_process(_delta: float) -> void:
 				if collider_velocity_y  >= 0:
 					emit_signal("enemy_died")
 
-func _on_visible_on_screen_notifier_2d_screen_exited():
-	pass
+#func _on_visible_on_screen_notifier_2d_screen_exited():
+	#pass
 	#queue_free()
 
 func _on_enemy_died():
