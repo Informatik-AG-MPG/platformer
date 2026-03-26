@@ -68,7 +68,23 @@ Um einen Hintergrund hinzuzufügen:
 - Wählt hier nun das eben gespeicherte Tileset
 - Nun könnt ihr wie zuvor malen, der Hintergrund erscheint nun aber hinter den Platformer und nicht auf der selben Ebene.
 ### Killzone
-WIP
+- Erstelle eine neue Szene vom Typ "Area2D" (speichere sie unter `scenes`) und wähle `Collision Mask 1 und 2`
+- Füge nun die Killzone-Szene in die Hauptszene (e.g. `main`), sowie eine `CollisionShape2D`-Node und eine `Timer`-Node als Child-Nodes
+- Stelle bei dem Timer eine Wait Time ein, die dir passt.
+- Nun, zurück in der Killzone-Szene fügt ein Skript hinzu:
+```gdscript
+extends Area2D
+
+@onready var timer = $Timer
+
+func _on_body_entered(_body):
+	timer.start()
+	
+func _on_timer_timeout():
+	get_tree().reload_current_scene()
+```
+Die beiden Funktionen sind dabei jeweils Signale. Das erste `on_body_entered` stammt von der `Killzone`, das zweite von dem `Timer`.
+
 ## 4. Gegner, GameOver
 WIP
 ## 5. Hochladen auf GitHub
