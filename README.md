@@ -9,12 +9,13 @@ Grundlegend ist diese letzte Sektion nach dem fantastischen "Godot Beginner Tuto
 https://github.com/user-attachments/assets/7205aa1e-7706-45f7-bd82-ec35102aa07a
 
 # Aufgabenplan
-1. [Spieler-Controller](#1-spieler-controller) (gemeinsam) (26.02.)
-2. [einfache Umgebung](#2-umgebung-erstellen-mit-tilesets) (gemeinsam) (05.03.)
-3. [Hintergrund, hochladen auf GitHub](#3-hintergrund-hochladen-auf-github) (gemeinsam) (12.03.)
-4. Eigene Sprites *Spieler und Umgebung* (gemeinsam) (12.03., 19.03.)
-5. Gegner, Game Over (gemeinsam)
-6. Weitere Gegner, eigener Game Over Bildschrim
+1. [Spieler-Controller](#1-spieler-controller) (gemeinsam) [26.02.]
+2. [einfache Umgebung](#2-umgebung-erstellen-mit-tilesets) (gemeinsam) [05.03.]
+3. [Hintergrund, Killzone](#3-hintergrund-hochladen-auf-github) (gemeinsam) [12.03.]
+4. [Gegner, Game Over (gemeinsam)](#4-gegner-gameover) [19.03., 26.03.]
+5. [Hochladen auf GitHub (eigenständig)](#5-hochladen-auf-github) [26.03.]
+6. Eigene Sprites *Spieler und Umgebung* (eigenständig)
+7. Weitere Gegner, eigener Game Over Bildschrim
 
 # Erklärung
 ## 0. Grundlegendes
@@ -66,7 +67,12 @@ Um einen Hintergrund hinzuzufügen:
 - In dem Hintergrund-Layer könnt ihr nun unter `Tileset` auf den Pfeil nach unten drücken und `Laden` auswählen
 - Wählt hier nun das eben gespeicherte Tileset
 - Nun könnt ihr wie zuvor malen, der Hintergrund erscheint nun aber hinter den Platformer und nicht auf der selben Ebene.
-### GitHub
+### Killzone
+WIP
+## 4. Gegner, GameOver
+WIP
+## 5. Hochladen auf GitHub
+Ladet nun euer Projekt mit eurem zuvor gelernten Wissen auf GitHub hoch. Hier, zur Erinnerung, die Links zu dem, was wir bereits aufgeschrieben haben.
 - [Einrichten von Access-Tokens](https://github.com/Informatik-AG-MPG/script?tab=readme-ov-file#access-tokens-f%C3%BCr-github-einrichten)
 - [Hochladen auf GitHub](https://github.com/Informatik-AG-MPG/script?tab=readme-ov-file#typisches-arbeiten-mit-git)
 - [Mögliche Probleme](https://github.com/Informatik-AG-MPG/script?tab=readme-ov-file#typisches-arbeiten-mit-git)
