@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dtoa854y6gogv"]
+
+[node name="Node2D" type="Node2D" unique_id=1878227191]
+
+[node name="Label" type="Label" parent="." unique_id=2064388354]
+offset_left = 32.0
+offset_top = 177.0
+offset_right = 1118.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 150
+text = "You finished"
+horizontal_alignment = 1
+vertical_alignment = 1

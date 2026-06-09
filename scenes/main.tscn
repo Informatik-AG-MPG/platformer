@@ -5,8 +5,13 @@
 [ext_resource type="TileSet" uid="uid://c7x7w2t4htahe" path="res://assets/World/tileset.tres" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://ddunuysbyun8j" path="res://scenes/enemy.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://c88udyeyn4dcf" path="res://scenes/killzone.tscn" id="5_tbgi4"]
+[ext_resource type="Script" uid="uid://24semykx6yqc" path="res://scripts/goal.gd" id="6_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://8o2cvfa1rdew" path="res://assets/finish_level_thingy.png" id="6_tefeu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tbgi4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xl0"]
+size = Vector2(28, 28)
 
 [node name="main" type="Node2D" unique_id=1487381316]
 
@@ -47,3 +52,19 @@ position = Vector2(73, 219)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=1443426488]
 position = Vector2(120, 2.5)
 shape = SubResource("WorldBoundaryShape2D_tbgi4")
+
+[node name="goal" type="Area2D" parent="." unique_id=1125852456]
+position = Vector2(379, 40)
+script = ExtResource("6_o6xl0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goal" unique_id=1045069310]
+position = Vector2(-1, -6)
+shape = SubResource("RectangleShape2D_o6xl0")
+debug_color = Color(0.827451, 0.37254903, 0.3647059, 0.6039216)
+
+[node name="ohh shiny" type="Sprite2D" parent="goal" unique_id=1822057548]
+position = Vector2(0, -8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_tefeu")
+
+[connection signal="body_entered" from="goal" to="goal" method="_on_body_entered"]
