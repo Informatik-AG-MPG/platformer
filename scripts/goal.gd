@@ -2,6 +2,13 @@ extends Area2D
 
 @onready var timer = $Timer
 
+func _ready() -> void:
+	# hide the goal on startup
+	self.visible = false
+	# disable the goal on startup
+	# otherwise it would functionally still work and that could also make for interesting gameplay
+	self.set_process(false)
+
 func _on_body_entered(body: Node2D) -> void:
 	# See here for string concatonation reference: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_format_string.html
 	# print("Debug - Body `%s` entered goal" % body.name)
