@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://dtoa854y6gogv"]
 
-[ext_resource type="Script" uid="uid://dpkeegahrq2r0" path="res://scenes/button.gd" id="1_mwn6m"]
+[ext_resource type="Script" uid="uid://cb6spmhmeusoj" path="res://scripts/end.gd" id="1_3d26k"]
+[ext_resource type="Script" uid="uid://dpkeegahrq2r0" path="res://scripts/button.gd" id="1_mwn6m"]
 
 [node name="main" type="Node2D" unique_id=1878227191]
+script = ExtResource("1_3d26k")
 
-[node name="Text" type="Label" parent="." unique_id=2064388354]
+[node name="text" type="Label" parent="." unique_id=2064388354]
 offset_left = 244.0
 offset_top = 50.0
 offset_right = 909.0
