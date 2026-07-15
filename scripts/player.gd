@@ -5,6 +5,8 @@ extends CharacterBody2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -300
 
+var movement_disabled = false
+
 func _physics_process(delta: float) -> void:
 	# Gravitation
 	if not is_on_floor():
@@ -39,7 +41,11 @@ func _physics_process(delta: float) -> void:
 		for i in range(hurtbox.get_collision_count()):
 			# Debug: print(hurtbox.get_collider(i))
 			if "Enemy" in hurtbox.get_collider(i).get_name():
+				# Bewegung deaktivieren (die move_and_slide Funktion mag es nicht, wenn man sie nach reload aufruft)
+				movement_disabled = true
 				# Szene neu laden (Spieler "stirbt")
 				get_tree().reload_current_scene()
-	move_and_slide()
+				
+	if (movement_disabled == false):
+		move_and_slide()
 	
