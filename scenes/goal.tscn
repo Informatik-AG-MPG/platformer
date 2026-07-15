@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dywb7hfusk16f"]
 
-[ext_resource type="Script" uid="uid://cd7j0ym1bth31" path="res://scripts/goal.gd" id="1_sx1j4"]
+[ext_resource type="Script" uid="uid://24semykx6yqc" path="res://scripts/goal.gd" id="1_sx1j4"]
 [ext_resource type="Texture2D" uid="uid://8o2cvfa1rdew" path="res://assets/finish_level_thingy.png" id="2_w3gav"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xl0"]
