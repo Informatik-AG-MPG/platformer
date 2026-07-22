@@ -12,10 +12,12 @@ https://github.com/user-attachments/assets/7205aa1e-7706-45f7-bd82-ec35102aa07a
 1. [Spieler-Controller](#1-spieler-controller) (gemeinsam) [26.02.]
 2. [einfache Umgebung](#2-umgebung-erstellen-mit-tilesets) (gemeinsam) [05.03.]
 3. [Hintergrund, Killzone](#3-hintergrund-hochladen-auf-github) (gemeinsam) [12.03.]
-4. [Gegner, Game Over (gemeinsam)](#4-gegner-gameover) [19.03., 26.03.]
-5. [Hochladen auf GitHub (eigenständig)](#5-hochladen-auf-github) [26.03.]
-6. Eigene Sprites *Spieler und Umgebung* (eigenständig)
-7. Weitere Gegner, eigener Game Over Bildschrim
+4. [Gegner](#4-gegner) (gemeinsam) [19.03., 26.03.]
+5. [Gewinnbedingung](#5-gewinnen) (gemeinsam)
+6. [End Bildschirm](#6-end-bildschirm) (gemeinsam)
+7. [Hochladen auf GitHub](#5-hochladen-auf-github) (gemeinsam/eigenständig)
+8. Eigene Sprites *Spieler und Umgebung* (eigenständig)
+9. Weitere Gegner, eigener Game Over Bildschrim (eigenständig)
 
 # Erklärung
 ## 0. Grundlegendes
@@ -92,13 +94,13 @@ WIP
 Bisher können wir das Spiel nur verlieren, aber nicht gewinnen. Ändern wir das!
 - Erstellt zunächst eine `goal`-Szene (wobei die Root-Node hier vom Typ `Area2D` sein soll)
 - Diese braucht eine `Sprite2D`-Node, eine `CollisionShape2D`-Node und eine `Timer`-Node
-- Führt den Sprite könnt ihr entweder eine eigene Grafik wie eine Flagge in GIMP zeichnen oder [meine](https://raw.githubusercontent.com/Informatik-AG-MPG/platformer/blob/main/assets/finish_level_thingy.png) (eher weniger gute) herunterladen.
-- den `CollisionShape` zieht ihr nun so, dass er ungefähr so groß ist wie die Grafik. (Etwas größer ist hier besser, da das Ziel positiv für den Spieler ist.)
-- Füge nun zu der `goal`-Szene ein Skript hinzu. Dieses wird genauso funktionieren, wie das `Killzone`-Skript von vorher.
-- Hier fügst du nun also zuerst die Timer-Node, als Variable mit dem `@onready`-Keyword hinzu, um später auf sie zuzugreifen.
-- Dann fügst du 2 Signale: `_on_body_entered` und `_on_timer_timeout` hinzu. (Über den Signaltab.)
+- Für den Sprite könnt ihr entweder eine eigene Grafik, wie eine Flagge, in GIMP zeichnen oder [meine](https://raw.githubusercontent.com/Informatik-AG-MPG/platformer/blob/main/assets/finish_level_thingy.png) (eher weniger gute) herunterladen.
+- den `CollisionShape` zieht ihr nun so, dass er ungefähr so groß ist wie die Grafik. (Etwas größer ist hier besser, da das Ziel positiv für den Spieler ist und wir Frustration vermeiden wollen)
+- Fügt nun zu der `goal`-Node (vom Typ `Area2D`) ein Skript hinzu. Dieses wird genauso funktionieren, wie das `Killzone`-Skript von vorher.
+- Hier fügt ihr nun also zuerst die Timer-Node, als Variable mit dem `@onready`-Keyword hinzu, um später auf sie zuzugreifen.
+- Dann fügt ihr 2 Signale: `_on_body_entered` und `_on_timer_timeout` hinzu. (Über den Signaltab.)
 - `_on_body_entered` soll nun den Timer starten, wenn der Spieler die `Area2D` betritt.
-- Sobald der Timer ausläuft soll nun die der End-Bildschirm geladen werden. (Aber bis wir den haben kannst du auch die aktuelle Szene neu laden.)
+- Sobald der Timer ausläuft soll dann der End-Bildschirm geladen werden. (Aber der kommt erst im nächsten Kapitel. Bis da hin, kannst du auch die aktuelle Szene neu laden.)
 In Skriptform, sieht das dann so aus:
 ```gdscript
 extends Area2D
@@ -117,7 +119,7 @@ func _on_timer_timeout() -> void:
 ### Gewinnbedingung
 Wir können aber auch dafür sorgen, dass das Ziel nur erscheint, wenn man zuvor eine andere `Area2D` betreten hat. Grundsätzlich funktioniert das genau gleich, wie das normale Ziel. 
 
-Aber damit der Spieler das Ziel überhaupt freischalten kann, muss es erstmal deaktiviert sein. Um das machen fügt folgendes zu dem Skript der `goal`-Szene von vorher hinzu:
+Aber damit der Spieler das Ziel überhaupt freischalten kann, muss es erstmal deaktiviert sein. Um das zu machen fügt folgendes zu dem Skript der `goal`-Node von vorher hinzu:
 ```gdscript
 func _ready() -> void:
 	# Verstecke das Ziel, sobald es verfügbar ist (es funktioniert aber nur)
@@ -126,6 +128,7 @@ func _ready() -> void:
 	# Sonst würde es trotzdem funktionieren, was auch für interessantes Gameplay sorgen könnte.
 	self.set_process(false)
 ```
+Jetzt ist bis zu dem Skript alles gleich, beim Erstellen der Gewinnbedingungsszene. Den Timer würde ich hier aber weglassen, je nachdem wie eurer Level aufgebaut ist, könnt ihr den aber natürlich auch hinzufügen (müsst dann aber auch das Skript unten anpassen).
 In dem Skript der Gewinnbedingungs-`Area2D` müssen wir das Ausschalten jetzt nur rückgänging machen, sobald der Spieler die `Area2D` betritt. Dazu nutzen wir wieder das `_on_body_entered`-Signal. Das sieht dann so aus:
 ```gdscript
 extends Area2D
