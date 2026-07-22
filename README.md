@@ -144,7 +144,8 @@ func _on_body_entered(body: Node2D) -> void:
 ## 6. End Bildschirm
 ## Funktionierende Knöpfe
 Wenn der Spieler nun gewinnt, wollen wir natürlich auch, dass etwas passiert. Also zeigen wir einen Siegesbildschirm. Von der Programmierlogik funktioniert dieser genau wie unser [erstes eigenes Projekt](https://github.com/Informatik-AG-MPG/script#erstes-eigenes-projekt), also:
-- Zunächst erstellt ihr eine neue Szene namens etwa `end.tscn`. 
+- Zunächst erstellt ihr eine neue Szene namens etwa `end.tscn`.
+- Die Root Node soll hier den Typ `Node2D` haben, da wir sie nicht in `main` einfügen wollen, sondern sie sozusagen ein eigenes "Level" ist.
 - Zu dieser fügt ihr eine `Label`-Node und 2 `Button` Nodes hinzu. 
 - Nun fügt ihr zu den beiden Knöpfen (den `Button` Nodes) ein Skript hinzu.
 - In diesem Skript überprüft ihr nun den Namen eures Knopfes und führt je nachdem welcher Knopf gedrückt wurde eine andere Aktion aus (z.B.: Spiel beenden und Level wiederholen/nächstes Level laden).
@@ -168,12 +169,13 @@ func _load_scene():
 		get_tree().quit()
 ```
 ## Ausrichtung der UI-Elemente
-Die Knöpfe und der Text liegen jetzt aber irgendwie im Raum (oder sind zumindest nicht genau in der Mitte). Das können wir am Programmatisch anpassen.
+Die Knöpfe und der Text liegen jetzt aber irgendwie im Raum (oder sind zumindest nicht genau in der Mitte). Das können wir aber mit ein wenig Code ändern.
 - Fügt dazu der Root-Node eurer `end.tscn`-Szene ein Skript hinzu.
 - Erstellt nun Variablen für jede Node die ihr ausrichten wollt und zieht hinter das `=` einfach die Node aus dem Scene-Tree per Drag-and-Drop.
-- Dann fragt ihr den DisplayServer nach der Größe des Bildschirms / Fenster um daran die Position anzupassen
+- Dann fragt ihr den DisplayServer nach der Größe des Bildschirms / Fensters um damit dann die Position der Nodes anzupassen
 - Für die x-Koordinate können wir einfach die Bildschirmgröße / 2 - die Größe der Node / 2 nehmen um die Node zu zentrieren
 - Für die y-Koordinate müssen wir einfach verschiedene Werte ausprobrieren durch die wir die Bildschirmgröße teilen (so dass die Node dann auf einer Höhe ist, die euch gefällt)
+
 Das fertige Skript sieht dann z.B.: so aus:
 ```gdscript
 extends Node2D
